@@ -52,15 +52,20 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
         title: 'Petrol Perfect',
-        home: Scaffold(
-          backgroundColor: Colors.black54,
-          body: ListView(
-            children: [
-              titleSection,
-              dataSection,
-            ],
-          ),
-        ));
+        home: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/black_green.jpg"),fit: BoxFit.cover)),
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+              body: ListView(
+                children: [
+                  titleSection,
+                  dataSection,
+                ],
+              ),
+            )),
+            );
   }
 
   Widget titleSection = Container(
@@ -74,7 +79,7 @@ class MyApp extends StatelessWidget {
             Text(
               'Petrol Perfect',
               style: TextStyle(
-                  color: Colors.lightGreenAccent,
+                  color: Colors.yellowAccent,
                   fontSize: 47.0,
                   wordSpacing: 2.0,
                   letterSpacing: 3.0,
